@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+.nav-container {
+  display: grid;
+  gap: 20px;
+  width: 100vw;
+  background-color: pink;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-container > .login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
+  padding: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-container > .login-btn > a {
+  text-decoration: none;
+  color: #000;
 }
+.nav-container > .main-logo {
+  justify-self: center;
+  width: 160px;
+}
+.nav-container > .main-logo > a > img {
+  width: 100%;
+}
+.nav-container > .nav-bottom {
+  justify-self: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: yellow;
+}
+.nav-container > .nav-bottom > .menu { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.nav-container > .nav-bottom > .menu > ul { display: flex; list-style: none; gap: 30px; }
+.nav-container > .nav-bottom > .search { position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
+.nav-container > .nav-bottom > .search > #search { border: none; border-bottom: 1px solid #000; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1%;
+  width: 90%;
+  max-width: 1280px;
+  background-color: cornflowerblue;
+  margin: 50px auto;
+}
+.product-container > a {
+  text-decoration: none;
+  color: #000;
+}
+.product-container > a > .product {
+  /* height: 500px; */
+  background-color: beige;
+}
+.product-container > a > .product > .img { height: 80%; background-color: orange; }
+.product-container > a > .product > .img > img { width: 100%; height: 100%; object-fit: cover; }
+.product-container > a > .product > .info { height: 20%; background-color: tomato; }
+
+
+.login-form { 
+  width: 400px;
+  height: 500px;
+  background-color: cornflowerblue;
+  margin: 100px auto;
+}
+.login-form > .login {
+  width: 450px;
+  height: 510px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.login-form > .login > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  color: #fff;
+  font-size: 30px;
+}
+.login-form > .login > .header > img {
+  width: 220px;
+}
+.login-form > .login > .form {
+  width: 100%;
+  height: 380px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.login-form > .login > .form > .wrap {
+  width: 80%;
+  height: 70%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form > .login > .form > .wrap > div {
+padding-bottom: 20px;
+}
+.login-form > .login > .form > .wrap input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #dfdfdf;
+  padding-left: 10px;
+}
+.login-form > .login > .form > .wrap input::placeholder {
+  color: #969696;
+}
+.login-form > .login > .form > .login-form-btn {
+  width: 70px;
+  height: 38px;
+  color: #fff;
+  background-color: #6973e3;
+  border: none;
+  border-radius: 4px;
 }
